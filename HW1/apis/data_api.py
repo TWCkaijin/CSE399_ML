@@ -44,6 +44,7 @@ def get_data(date_list: List[str]) -> Tuple[pd.DataFrame, pd.DataFrame, MonthDat
     exit_data = pd.DataFrame()
     date_data = MonthData()
     for d in date_list:
+        os.makedirs(os.path.join(os.getcwd(), 'HW1', 'data'), exist_ok=True)
         file_path = os.path.join(os.getcwd(), 'HW1', 'data', f"{d}_cht.ods")
         if os.path.exists(file_path):
             file_path = os.path.join(os.getcwd(), 'HW1', 'data', f"{d}_cht.ods")
