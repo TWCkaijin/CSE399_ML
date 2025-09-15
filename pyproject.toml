@@ -12,3 +12,9 @@ dependencies = [
     "pandas>=2.3.2",
     "requests>=2.32.5",
 ]
+
+[project.scripts]
+p1_1 = "HW1.p1_1:main"
+p1_2 = "HW1.p1_2:main"
+p1_3 = "HW1.p1_3:main"
+p1_4 = "HW1.p1_4:main"
