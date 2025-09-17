@@ -1,4 +1,4 @@
-from .apis.data_api import get_data
+from ..apis.data_api import get_data
 import numpy as np 
 from matplotlib import pyplot as plt 
 import pandas as pd
@@ -35,3 +35,6 @@ def main():
     plt.xticks(range(end_day-start_day), dates, rotation=90)
     plt.legend(entry_data.keys().to_list()+['average'])
     plt.show()
+    
+if __name__ == '__main__':
+    main()

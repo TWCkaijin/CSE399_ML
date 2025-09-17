@@ -1,12 +1,12 @@
-from .apis.data_api import get_data
+from ..apis.data_api import get_data
 import numpy as np 
 from matplotlib import pyplot as plt 
 import pandas as pd
 
-def main():
+plt.rcParams['font.sans-serif'] = ['Arial Unicode MS', 'SimHei', 'DejaVu Sans']
+plt.rcParams['axes.unicode_minus'] = False
 
-    plt.rcParams['font.sans-serif'] = ['Arial Unicode MS', 'SimHei', 'DejaVu Sans']
-    plt.rcParams['axes.unicode_minus'] = False
+def main():
 
     entry_data, exit_data, date_data = get_data(['202501','202502','202503'])
     station = np.random.choice(entry_data.keys(),(1,), replace=False)[0]
@@ -24,3 +24,6 @@ def main():
     ax[1].set_title(f'Histogram of {station}')
     plt.legend()
     plt.show()
+    
+if __name__ == '__main__':
+    main()
