@@ -18,6 +18,7 @@ p1_1 = "HW1.p1.p1_a:main"
 p1_2 = "HW1.p1.p1_b:main"
 p1_3 = "HW1.p1.p1_c:main"
 p1_4 = "HW1.p1.p1_d:main"
+p2 = "HW1.p2.p2:main"
 
 
 [build-system]
