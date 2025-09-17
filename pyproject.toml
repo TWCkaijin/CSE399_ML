@@ -14,7 +14,18 @@ dependencies = [
 ]
 
 [project.scripts]
-p1_1 = "HW1.p1_1:main"
-p1_2 = "HW1.p1_2:main"
-p1_3 = "HW1.p1_3:main"
-p1_4 = "HW1.p1_4:main"
+p1_1 = "HW1.p1.p1_a:main"
+p1_2 = "HW1.p1.p1_b:main"
+p1_3 = "HW1.p1.p1_c:main"
+p1_4 = "HW1.p1.p1_d:main"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["HW1"]
