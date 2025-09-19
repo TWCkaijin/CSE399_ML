@@ -9,7 +9,7 @@ uv sync
 If you got local package not found error, run:
 
 ```bash
-uv sync --force
+uv pip install -e .       # 安裝本地子套件（editable）
 ```
 
 ## add entry points
