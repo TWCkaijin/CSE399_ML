@@ -1,4 +1,4 @@
-from ..apis.data_api import get_data
+from HW1.apis.data_api import get_data
 import numpy as np 
 from matplotlib import pyplot as plt 
 import pandas as pd
