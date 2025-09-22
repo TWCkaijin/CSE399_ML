@@ -34,11 +34,11 @@ class Data:
 
 def get_data(date_list: List[str]) -> Tuple[Data, Data, Data]:
     """
-    An API to get the entry_data auto matically from the web
+    An API to get the entry_data automatically from the web
     Args:
         date_str (str): example "202501" for January 2025
     Returns:
-        pd.DataFrame: A en)try_data frame containing the entry_data such as 
+        pd.DataFrame: A entry_data frame containing the entry_data such as 
                         index: station names
                         columns: dates
                         values: ridership numbers
