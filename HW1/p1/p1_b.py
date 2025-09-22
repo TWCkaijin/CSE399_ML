@@ -10,11 +10,13 @@ def main():
 
     entry_data, exit_data, date_data = get_data(['202501','202502','202503'])
     station = np.random.choice(entry_data.keys(),(1,), replace=False)[0]
-    print(entry_data.data[0][station])
+    entry_list = entry_data.get_full_list()[station]
+    print(entry_list)
+    
     
     fig, ax = plt.subplots(1,2,figsize=(10, 6))
-    ax[0].boxplot(entry_data.get_full_list()[station], positions=[1], labels=[f'entry'])
-    ax[1].hist(entry_data.get_full_list()[station], bins=30, alpha=0.5, label=f'Month entry')
+    ax[0].boxplot(entry_list, positions=[1], labels=[f'entry'])
+    ax[1].hist(entry_list, bins=30, alpha=0.5, label=f'Month entry')
     
     ax[0].boxplot(exit_data.get_full_list()[station], positions=[2], labels=[f'exit'])
     ax[1].hist(exit_data.get_full_list()[station], bins=30, alpha=0.5, label=f'Month exit')
@@ -27,3 +29,4 @@ def main():
     
 if __name__ == '__main__':
     main()
+    plt.hist
