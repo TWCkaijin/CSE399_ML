@@ -11,9 +11,10 @@ def main():
     station = np.random.choice(entry_data.keys(),(1,), replace=False)
     
     plt.plot(entry_data.get_full_list()[station[0]], label='Raw Data', linewidth=1.5, color="red")
-    for d in range(3,9):
-        mov_avg = entry_data.get_full_list()[station[0]].rolling(window=d).mean()
-        plt.plot(mov_avg, label=f'{d}-Day Moving Average')
+
+    d = np.random.randint(3,8)
+    mov_avg = entry_data.get_full_list()[station[0]].rolling(window=d).mean()
+    plt.plot(mov_avg, label=f'{d}-Day Moving Average')
     plt.xlabel('Date')
     plt.ylabel(f'Entry of {station[0]}')
     plt.legend()
